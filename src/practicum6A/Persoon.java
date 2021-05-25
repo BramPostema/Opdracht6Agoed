@@ -31,6 +31,14 @@ public class Persoon {
             return false;
         }
     }
+    public Game zoekGameOpNaam(String s) {
+        for (Game g : this.games) {
+            if (g.getNaam().equals(s)) {
+                return g;
+            }
+        }
+        return null;
+    }
 
     @Override
     public String toString() {
