@@ -40,6 +40,15 @@ public class Persoon {
                 '}';
     }
 
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> gamesTeKoop){
+        ArrayList<Game> nogNietInBezit = new ArrayList<>();
+        for ( Game game:gamesTeKoop){
+            if (this.games.indexOf(game)==-1 ){
+                nogNietInBezit.add(game);
+            }
+        }
+        return nogNietInBezit;
+    }
 
 
 }
